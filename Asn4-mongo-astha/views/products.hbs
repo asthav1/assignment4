@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management</title>
+</head>
+<body>
+    <h1>All Product Info</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Stars</th>
+                <th>Reviews</th>
+                <th>Price</th>
+                <th>List Price</th>
+                <th>Category</th>
+                <th>Best Seller</th>
+                <th>Bought In Last Month</th>
+            </tr>
+        </thead>
+        <tbody>
+      
+            {{#each products}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{imgUrl}}</td>
+                    <td>{{stars}}</td>
+                    <td>{{reviews}}</td>
+                    <td>{{price}}</td>
+                    <td>{{listPrice}}</td>
+                    <td>{{categoryName}}</td>
+                    <td>{{isBestSeller}}</td>
+                    <td>{{boughtInLastMonth}}</td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <h1>Insert New Product</h1>
+    <form action="/products" method="POST">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="imgUrl">Image URL:</label><br>
+        <input type="text" id="imgUrl" name="imgUrl"><br>
+        <label for="stars">Stars:</label><br>
+        <input type="number" id="stars" name="stars" min="0" step="0.1"><br>
+        <label for="reviews">Reviews:</label><br>
+        <input type="number" id="reviews" name="reviews" min="0"><br>
+        <label for="price">Price:</label><br>
+        <input type="number" id="price" name="price" min="0" step="0.01"><br>
+        <label for="listPrice">List Price:</label><br>
+        <input type="number" id="listPrice" name="listPrice" min="0" step="0.01"><br>
+        <label for="categoryName">Category Name:</label><br>
+        <input type="text" id="categoryName" name="categoryName"><br>
+        <label for="isBestSeller">Is Best Seller:</label><br>
+        <select id="isBestSeller" name="isBestSeller">
+            <option value="true">True</option>
+            <option value="false">False</option>
+        </select><br>
+        <label for="boughtInLastMonth">Bought In Last Month:</label><br>
+        <input type="number" id="boughtInLastMonth" name="boughtInLastMonth" min="0"><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
