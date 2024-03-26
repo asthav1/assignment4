@@ -1,0 +1,23 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "echo \"No build specified\" && exit 1",
+    "test": "echo \"No test specified\" && exit 1",
+    "start": "node app2.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asthav1/assign4.git"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-handlebars": "^7.1.2",
+    "express-validator": "^6.14.2",
+    "i": "^0.3.7",
+    "init": "^0.1.2",
+    "mongodb": "^6.5.0",
+    "mongoose": "^6.7.2"
+  }
+}
